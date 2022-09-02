@@ -55,7 +55,7 @@ $testComplete = "C:\Program Files (x86)\SmartBear\TestComplete 15\x64\Bin\testco
 $projectFile = "${projectName}.pjs"
 $date = get-date -f yyyyMMddHHmmss # We need to make unique log files or we'll get overwrite errors from TestComplete
 
-Set-Location ${HOME}\Documents\"TestComplete 16 Projects"\${projectName}
+Set-Location ${HOME}\Documents\"TestComplete 15 Projects"\${projectName}
 #starts a process, waits for it to finish and then checks the exit code.
 $p = Start-Process "$testComplete" -ArgumentList "${projectFile} /run /project:${projectName} /tags:${tags} /ExportLog:${LogDir}\${date}-ResultsLog /ExportSummary:${LogDir}\${date}-Results.xml /exit" -Verb RunAs 
 $p.HasExited
